@@ -99,14 +99,28 @@ print "(1) MATH QUIZ:"
 print "(2) MOVIE QUIZ:"
 print "(3) MUSIC QUIZ:"
 print "Which one do you want to take?"
+print "Type \"q\" when you want to exit!"
 
 user_option = input()
+print user_option != "q"
 
-if user_option in options:
-     options[user_option]()
-else :
-	print "Sair do Quiz"
+while user_option != "q":
 
+	if user_option in options:
+		options[user_option]()
+		print "We have:"
+		print "(1) MATH QUIZ:"
+		print "(2) MOVIE QUIZ:"
+		print "(3) MUSIC QUIZ:"
+		print "Which one do you want to take?"
+		print "Type \"q\" when you want to exit!"
+		user_option = input()
+				
+	else :
+		print "Leaving the Quiz"
+		user_option = 'q'
+		
+		
 
 
 
